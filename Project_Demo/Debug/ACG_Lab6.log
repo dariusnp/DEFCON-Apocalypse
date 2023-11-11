@@ -1,7 +1,7 @@
 ﻿          1 file(s) copied.
           1 file(s) copied.
   main.cpp
-C:\Users\aicam\source\repos\DEFCON-Apocalypse\Project_Demo\main.cpp(196,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\aicam\source\repos\DEFCON-Apocalypse\Project_Demo\main.cpp(239,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\aicam\source\repos\DEFCON-Apocalypse\Project_Demo\main.cpp(240,49): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\aicam\source\repos\DEFCON-Apocalypse\Project_Demo\main.cpp(222,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aicam\source\repos\DEFCON-Apocalypse\Project_Demo\main.cpp(265,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\aicam\source\repos\DEFCON-Apocalypse\Project_Demo\main.cpp(266,49): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   ACG_Lab6.vcxproj -> C:\Users\aicam\source\repos\DEFCON-Apocalypse\Project_Demo\Debug\ACG_Lab6.exe

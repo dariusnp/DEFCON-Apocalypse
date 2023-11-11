@@ -19,6 +19,9 @@
 //variables
 GLFWwindow* window;
 const int width = 1024, height = 768;
+float x = 0.0, y = 0.25, z = 0.0;
+
+glm::mat4 trans(1.0f);
 
 // lighting
 glm::vec3 lightPos(-3.0f, 0.0f, 3.0f);
@@ -30,11 +33,32 @@ float lastFrame = 0.0f; // Time of last frame
 
 //Add the camera parameters here and create a camera object
 
+glm::vec3 positions[] = {
+		glm::vec3(x,  y,  z),
+		/*glm::vec3(0.2f,  0.5f, 0.1f),
+		glm::vec3(-0.15f, -0.22f, 0),
+		glm::vec3(-0.38f, -0.2f, -0.7),
+		glm::vec3(0.24f, -0.4f, 0.1),
+		glm::vec3(-0.17f,  0.3f, 0.7),
+		glm::vec3(0.23f, -0.2f, 0.1),
+		glm::vec3(0.15f,  0.2f, 0),
+		glm::vec3(0.7f,  0.7f, 0.9),
+		glm::vec3(-0.13f,  0.9f, 0)*/
+};
+
 void window_callback(GLFWwindow* window, int new_width, int new_height)
 {
 	glViewport(0, 0, new_width, new_height);
 }
 
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) 
+{
+	if (key == GLFW_KEY_D && action == GLFW_PRESS) {
+		x += 0.01f;
+		trans = glm::mat4(1.0f);
+		trans = glm::translate(trans, positions[0]);
+	}
+}
 
 int main()
 {
@@ -82,10 +106,10 @@ int main()
 		0.0f, 0.05f, 0.05f,  // bottom left
 		0.05f,  0.05f, 0.05f,   // top left 
 
-		0.0f, 0.0f, 0.0f,
+		/*0.0f, 0.0f, 0.0f,
 		0.05f, 0.0f, 0.0f,
 		0.0f, 0.05f, 0.0f,
-		0.05f, 0.05f, 0.0f
+		0.05f, 0.05f, 0.0f*/
 	};
 
 
@@ -105,7 +129,7 @@ int main()
 	};
 
 	glm::vec3 positions[] = {
-		glm::vec3(0.0f,  0.25f,  0.0f),
+		glm::vec3(x,  y,  z),
 		/*glm::vec3(0.2f,  0.5f, 0.1f),
 		glm::vec3(-0.15f, -0.22f, 0),
 		glm::vec3(-0.38f, -0.2f, -0.7),
@@ -181,6 +205,8 @@ int main()
 	glBindVertexArray(0);
 
 	glfwSetFramebufferSizeCallback(window, window_callback);
+
+	glfwSetKeyCallback(window, key_callback);
 
 	//Change accordingly for camera
 	glm::mat4 view;
