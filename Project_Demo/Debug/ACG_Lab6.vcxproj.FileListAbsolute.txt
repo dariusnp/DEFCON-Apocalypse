@@ -1,0 +1,2 @@
+F:\Teaching\Sem1\ACG\Lab6\Lab6\Lab6 - OpenGL-init\Lab6 - OpenGL\Debug\ACG_Lab6.exe
+F:\Teaching\Sem1\ACG\Lab6\Lab6\Lab6 - OpenGL-init\Lab6 - OpenGL\Debug\ACG_Lab6.pdb

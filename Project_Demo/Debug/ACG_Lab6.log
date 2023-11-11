@@ -1,0 +1,7 @@
+﻿          1 file(s) copied.
+          1 file(s) copied.
+  main.cpp
+F:\Teaching\Sem1\ACG\Lab6\Lab6\Lab6 - OpenGL-init\Lab6 - OpenGL\main.cpp(214,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+F:\Teaching\Sem1\ACG\Lab6\Lab6\Lab6 - OpenGL-init\Lab6 - OpenGL\main.cpp(257,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+F:\Teaching\Sem1\ACG\Lab6\Lab6\Lab6 - OpenGL-init\Lab6 - OpenGL\main.cpp(258,49): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  ACG_Lab6.vcxproj -> F:\Teaching\Sem1\ACG\Lab6\Lab6\Lab6 - OpenGL-init\Lab6 - OpenGL\Debug\ACG_Lab6.exe
