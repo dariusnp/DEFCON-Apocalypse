@@ -36,7 +36,7 @@ void window_callback(GLFWwindow* window, int new_width, int new_height)
 }
 
 
-int main(void)
+int main()
 {
 	// Initialise GLFW
 	if (!glfwInit())
@@ -92,7 +92,7 @@ int main(void)
 	unsigned int indices[] = {  
 		0, 1, 2,  
 		1, 3, 2, 
-		2, 3, 7,
+		/*2, 3, 7,
 		2, 7, 6,
 		1, 7, 3,
 		1, 5, 7,
@@ -101,12 +101,12 @@ int main(void)
 		0, 4, 1,
 		1, 4, 5,
 		2, 6, 4,
-		0, 2, 4
+		0, 2, 4*/
 	};
 
 	glm::vec3 positions[] = {
-		glm::vec3(0.0f,  0.0f,  0.2f),
-		glm::vec3(0.2f,  0.5f, 0.1f),
+		glm::vec3(0.0f,  0.25f,  0.0f),
+		/*glm::vec3(0.2f,  0.5f, 0.1f),
 		glm::vec3(-0.15f, -0.22f, 0),
 		glm::vec3(-0.38f, -0.2f, -0.7),
 		glm::vec3(0.24f, -0.4f, 0.1),
@@ -114,26 +114,7 @@ int main(void)
 		glm::vec3(0.23f, -0.2f, 0.1),
 		glm::vec3(0.15f,  0.2f, 0),
 		glm::vec3(0.7f,  0.7f, 0.9),
-		glm::vec3(-0.13f,  0.9f, 0)
-	};
-
-	//vertices and indices for a light source (pyramid)
-	float verticesPyramid[] = {
-		0.05f,  0.0f, 0.05f,  
-		-0.05f, 0.0f, 0.05f,  
-		-0.05f, 0.0f, -0.05f,  
-		0.05f,  0.0f, -0.05f,   //base
-
-		0.0f, 0.1f, 0.0f //top
-	};
-
-	unsigned int indicesPyramid[] = { 
-		0, 2, 1,
-		0, 3, 2,
-		0, 3, 4,
-		0, 4, 1,
-		1, 4, 2,
-		3, 4, 2
+		glm::vec3(-0.13f,  0.9f, 0)*/
 	};
 
 	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -157,6 +138,7 @@ int main(void)
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo1);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
+
 	//set attribute pointers
 	glVertexAttribPointer(
 		0,                  // attribute 0, must match the layout in the shader.
@@ -178,11 +160,11 @@ int main(void)
 
 	glBindVertexArray(vao2);
 
-	glBindBuffer(GL_ARRAY_BUFFER, vbo2);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(verticesPyramid), verticesPyramid, GL_STATIC_DRAW);
+	//glBindBuffer(GL_ARRAY_BUFFER, vbo2);
+	//glBufferData(GL_ARRAY_BUFFER, sizeof(verticesPyramid), verticesPyramid, GL_STATIC_DRAW);
 
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo2);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indicesPyramid), indicesPyramid, GL_STATIC_DRAW);
+	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo2);
+	//glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indicesPyramid), indicesPyramid, GL_STATIC_DRAW);
 
 	//set attribute pointers
 	glVertexAttribPointer(
@@ -208,7 +190,7 @@ int main(void)
 	projection = glm::perspective(glm::radians(45.0f), (float)width / (float)height, 0.1f, 10000.0f);
 
 	// Check if the window was closed
-	while (!glfwWindowShouldClose(window))
+	while (!glfwWindowShouldClose(window) && !glfwGetKey(window, GLFW_KEY_ESCAPE))
 	{
 		//calculate delta time 
 		float currentFrame = glfwGetTime();
@@ -227,12 +209,12 @@ int main(void)
 		// Use our shader
 		glUseProgram(programID);
 
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 1; i++)
 		{
 
 			glm::mat4 model;
 			model = glm::translate(model, positions[i]);
-			model = glm::rotate(model, (float)glfwGetTime() * 100, glm::vec3(0.0f, 1.0f, 0.0f));
+			//model = glm::rotate(model, (float)glfwGetTime() * 100, glm::vec3(0.0f, 1.0f, 0.0f));
 
 			//calculate MVP matrix
 			glm::mat4 matrix = projection * view * model;
@@ -247,7 +229,7 @@ int main(void)
 			//!!! bind the appropriate VAO before drawing
 			glBindVertexArray(vao1);
 
-			glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
+			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 		}
 
 		//Light object changes
