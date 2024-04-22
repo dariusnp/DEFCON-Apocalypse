@@ -1,0 +1,15 @@
+D:\Proiect ACG\GameEngineF\GameEngine\backends\imgui_impl_glfw.cpp;D:\Proiect ACG\GameEngineF\GameEngine\Debug\imgui_impl_glfw.obj
+D:\Proiect ACG\GameEngineF\GameEngine\backends\imgui_impl_opengl3.cpp;D:\Proiect ACG\GameEngineF\GameEngine\Debug\imgui_impl_opengl3.obj
+D:\Proiect ACG\GameEngineF\GameEngine\Camera\camera.cpp;D:\Proiect ACG\GameEngineF\GameEngine\Debug\camera.obj
+D:\Proiect ACG\GameEngineF\GameEngine\Graphics\window.cpp;D:\Proiect ACG\GameEngineF\GameEngine\Debug\window.obj
+D:\Proiect ACG\GameEngineF\GameEngine\iamgui\imgui.cpp;D:\Proiect ACG\GameEngineF\GameEngine\Debug\imgui.obj
+D:\Proiect ACG\GameEngineF\GameEngine\iamgui\imgui_demo.cpp;D:\Proiect ACG\GameEngineF\GameEngine\Debug\imgui_demo.obj
+D:\Proiect ACG\GameEngineF\GameEngine\iamgui\imgui_draw.cpp;D:\Proiect ACG\GameEngineF\GameEngine\Debug\imgui_draw.obj
+D:\Proiect ACG\GameEngineF\GameEngine\iamgui\imgui_tables.cpp;D:\Proiect ACG\GameEngineF\GameEngine\Debug\imgui_tables.obj
+D:\Proiect ACG\GameEngineF\GameEngine\iamgui\imgui_widgets.cpp;D:\Proiect ACG\GameEngineF\GameEngine\Debug\imgui_widgets.obj
+D:\Proiect ACG\GameEngineF\GameEngine\main.cpp;D:\Proiect ACG\GameEngineF\GameEngine\Debug\main.obj
+D:\Proiect ACG\GameEngineF\GameEngine\Model Loading\meshLoaderObj.cpp;D:\Proiect ACG\GameEngineF\GameEngine\Debug\meshLoaderObj.obj
+D:\Proiect ACG\GameEngineF\GameEngine\Model Loading\mesh.cpp;D:\Proiect ACG\GameEngineF\GameEngine\Debug\mesh.obj
+D:\Proiect ACG\GameEngineF\GameEngine\Shaders\shader.cpp;D:\Proiect ACG\GameEngineF\GameEngine\Debug\shader.obj
+D:\Proiect ACG\GameEngineF\GameEngine\Model Loading\texture.cpp;D:\Proiect ACG\GameEngineF\GameEngine\Debug\texture.obj
+D:\Proiect ACG\GameEngineF\GameEngine\UI\UI.cpp;D:\Proiect ACG\GameEngineF\GameEngine\Debug\UI.obj

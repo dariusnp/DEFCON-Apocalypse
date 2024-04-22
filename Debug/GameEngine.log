@@ -1,0 +1,8 @@
+﻿  main.cpp
+D:\Proiect ACG\GameEngineF\GameEngine\main.cpp(195,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Proiect ACG\GameEngineF\GameEngine\main.cpp(357,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Proiect ACG\GameEngineF\GameEngine\main.cpp(389,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Proiect ACG\GameEngineF\GameEngine\main.cpp(421,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Proiect ACG\GameEngineF\GameEngine\main.cpp(631,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Proiect ACG\GameEngineF\GameEngine\main.cpp(632,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  GameEngine.vcxproj -> D:\Proiect ACG\GameEngineF\Debug\GameEngine.exe
